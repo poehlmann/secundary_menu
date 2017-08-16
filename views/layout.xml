@@ -1,0 +1,613 @@
+<odoo>
+    <data>
+        <!-- Customize header  -->
+        <template id="custom_header" inherit_id="website.layout" name="Custom Header">
+
+            <!-- Assign an id  -->
+            <xpath expr="//div[@id='wrapwrap']/header" position="attributes">
+                <attribute name="secundary_megamenu">
+
+                </attribute>
+            </xpath>
+
+            <!-- Add an element after the top menu  -->
+            <xpath expr="//div[@id='wrapwrap']/header/div" position="after">
+                <div class="desktop-only">
+                    <style>
+                        @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+                        body {
+                        font-family: 'Open Sans', 'sans-serif';
+                        }
+
+
+                        .dropdown-menu {
+                        display: none !important;
+                        }
+
+                        .open .dropdown-menu {
+                        display: block !important;
+                        }
+
+                        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+                        color: #948686;
+                        background-color: transparent;
+                        }
+
+
+                        .mega-dropdown {
+                        position: static !important;
+                        }
+                        .mega-dropdown-menu {
+                        padding: 20px 0px;
+                        width: 100%;
+                        box-shadow: none;
+                        -webkit-box-shadow: none;
+                        }
+                        .mega-dropdown-menu > li > ul {
+                        padding: 0;
+                        margin: 0;
+                        }
+                        .mega-dropdown-menu > li > ul > li {
+                        list-style: none;
+                        }
+                        .mega-dropdown-menu > li > ul > li > a {
+                        display: block;
+                        color: #222;
+                        padding: 3px 5px;
+                        }
+                        .mega-dropdown-menu > li ul > li > a:hover,
+                        .mega-dropdown-menu > li ul > li > a:focus {
+                        text-decoration: none;
+                        background-color: transparent;
+                        }
+                        .mega-dropdown-menu .dropdown-header {
+                        font-size: 18px;
+                        color: #00a4d8;
+                        padding: 5px 60px 5px 5px;
+                        line-height: 30px;
+                        }
+
+                        .carousel-control {
+                        width: 30px;
+                        height: 30px;
+                        top: -35px;
+
+                        }
+                        .left.carousel-control {
+                        right: 30px;
+                        left: inherit;
+                        }
+                        .carousel-control .glyphicon-chevron-left,
+                        .carousel-control .glyphicon-chevron-right {
+                        font-size: 12px;
+                        background-color: #fff;
+                        line-height: 30px;
+                        text-shadow: none;
+                        color: #333;
+                        border: 1px solid #ddd;
+                        }
+                        .v-separator
+                        {
+                        content: "";
+                        display: inline-block;
+                        width: 0px;
+                        height: 100px;
+                        border-right: 1px solid #fafafa;
+                        border-left: 1px solid #b4b4b4;
+                        padding: 0;
+                        }
+                    </style>
+
+                    <div style="z-index: 25;top: 5%;" class="navbar navbar-default navbar-static-topF">
+                        <div class="container">
+                            <nav class="navbar navbar">
+                                <div class="collapse navbar-collapse js-navbar-collapse">
+                                    <button class="navbar-toggle" type="button" data-toggle="collapse"
+                                            data-target=".js-navbar-collapse">
+                                        <!--<span class="sr-only">Toggle navigation</span>-->
+                                        <span class="icon-bar"/>
+                                        <span class="icon-bar"/>
+                                        <span class="icon-bar"/>
+                                    </button>
+                                </div>
+                                <div class="collapse navbar-collapse js-navbar-collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown mega-dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Herramientas
+                                                Electricas
+                                                <span class="caret"/>
+                                            </a>
+                                            <ul class="dropdown-menu mega-dropdown-menu">
+                                                <li class="col-sm-3">
+                                                    <ul>
+                                                        <li class="dropdown-header">Generadores</li>
+                                                        <div id="menCollection" class="carousel slide"
+                                                             data-ride="carousel">
+                                                            <div class="carousel-inner">
+                                                                <div class="item active">
+                                                                    <a href="#">
+                                                                        <img src="https://roghur.com/wadm/imagenes/producto/mediana/20_01_2014_17_17_00_624243325.png"
+                                                                             class="img-responsive"
+                                                                             alt="GENERADOR A GASOLINA GG-8335"/>
+                                                                    </a>
+                                                                    <h4>
+                                                                        <small>GENERADOR A GASOLINA GG-8335</small>
+                                                                    </h4>
+                                                                    <button class="btn btn-primary" type="button">49,99
+                                                                        Bs
+                                                                    </button>
+                                                                    <button href="http://demo.redeskbolivia.com/shop/product/im-9250-1-74"
+                                                                            class="btn btn-default" type="button">
+                                                                        <span class="fa fa-shopping-cart"/>
+                                                                        Comprar Ahora
+                                                                    </button>
+                                                                </div><!-- End Item -->
+                                                                <div class="item">
+                                                                    <a href="#">
+                                                                        <img src="https://roghur.com/wadm/imagenes/producto/mediana/20_01_2014_17_15_04_256401197.png"
+                                                                             class="img-responsive"
+                                                                             alt="GENERADOR A GASOLINA GG-8220"/>
+                                                                    </a>
+                                                                    <h4>
+                                                                        <small>GENERADOR A GASOLINA GG-8220</small>
+                                                                    </h4>
+                                                                    <button class="btn btn-primary" type="button">99,99
+                                                                        Bs
+                                                                    </button>
+                                                                    <button href="http://demo.redeskbolivia.com/shop/product/ite-8250-73"
+                                                                            class="btn btn-default" type="button">
+                                                                        <span class="fa fa-shopping-cart"/>
+                                                                        Comprar Ahora
+                                                                    </button>
+                                                                </div><!-- End Item -->
+                                                                <div class="item">
+                                                                    <a href="#">
+                                                                        <img src="https://roghur.com/wadm/imagenes/producto/mediana/20_01_2014_17_07_32_211959725.png"
+                                                                             class="img-responsive"
+                                                                             alt="GENERADOR A GASOLINA GG-8500E"/>
+                                                                    </a>
+                                                                    <h4>
+                                                                        <small>GENERADOR A GASOLINA GG-8500E</small>
+                                                                    </h4>
+                                                                    <button class="btn btn-primary" type="button">99,99
+                                                                        Bs
+                                                                    </button>
+                                                                    <button href="http://demo.redeskbolivia.com/shop/product/ite-8250-73"
+                                                                            class="btn btn-default" type="button">
+                                                                        <span class="fa fa-shopping-cart"/>
+                                                                        Comprar Ahora
+                                                                    </button>
+                                                                </div><!-- End Item -->
+                                                                <div class="item">
+                                                                    <a href="#">
+                                                                        <img src="https://roghur.com/wadm/imagenes/producto/mediana/20_01_2014_16_59_11_1299393679.png"
+                                                                             class="img-responsive"
+                                                                             alt="GENERADOR A GASOLINA GG-7500/1"/>
+                                                                    </a>
+                                                                    <h4>
+                                                                        <small>GENERADOR A GASOLINA GG-7500/1</small>
+                                                                    </h4>
+                                                                    <button class="btn btn-primary" type="button">99,99
+                                                                        Bs
+                                                                    </button>
+                                                                    <button href="http://demo.redeskbolivia.com/shop/product/ite-8250-73"
+                                                                            class="btn btn-default" type="button">
+                                                                        <span class="fa fa-shopping-cart"/>
+                                                                        Comprar Ahora
+                                                                    </button>
+                                                                </div><!-- End Item -->
+                                                            </div><!-- End Carousel Inner -->
+                                                            Controls
+                                                            <a class="left carousel-control" href="#menCollection"
+                                                               role="button" data-slide="prev">
+                                                                <span class="fa fa-chevron-left"
+                                                                      aria-hidden="true"/>
+                                                                <span class="sr-only">Anterior</span>
+                                                            </a>
+                                                            <a class="right carousel-control" href="#menCollection"
+                                                               role="button" data-slide="next">
+                                                                <span class="fa fa-chevron-right"
+                                                                      aria-hidden="true"/>
+                                                                <span class="sr-only">Siguiente</span>
+                                                            </a>
+                                                        </div><!-- /.carousel -->
+                                                        <li class="divider"/>
+                                                        <li>
+                                                            <a href="http://demo.redeskbolivia.com/shop">Mirar toda la
+                                                                coleccion
+                                                                <span class="fa fa-chevron-right pull-right"/>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3">
+                                                    <ul>
+                                                        <li class="dropdown-header">
+                                                            <a href="http://demo.redeskbolivia.com/shop/product/im-9250-1-74">
+                                                                Discos
+                                                            </a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="http://demo.redeskbolivia.com/shop/product/im-9250-1-74">
+                                                                Electricas Portatiles
+                                                            </a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="http://demo.redeskbolivia.com/shop/product/im-9250-1-74">
+                                                                Soldadoras
+                                                            </a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="http://demo.redeskbolivia.com/shop/product/im-9250-1-74">
+                                                                Electrodos
+                                                            </a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="http://demo.redeskbolivia.com/shop/product/im-9250-1-74">
+                                                                Escaleras
+                                                            </a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="http://demo.redeskbolivia.com/shop/product/im-9250-1-74">
+                                                                Estacionarias
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3">
+                                                    <ul>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Inalambricas</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Jardineria</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Neumaticas</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Accesorios</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Compresores</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Hidrolavadoras</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3">
+                                                    <ul>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Aspiradoras</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Equipos para pintar</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Manuales</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Motobombas</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Bombas</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">
+                                                            <a href="#">Bolsas de trabajo</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown mega-dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Herramientas
+                                                <span class="caret"/>
+                                            </a>
+                                            <ul class="dropdown-menu mega-dropdown-menu">
+                                                <li class="col-sm-3">
+                                                    <ul>
+                                                        <li class="dropdown-header">Taladros</li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">Cortadoras</li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3">
+                                                    <ul>
+                                                        <li class="dropdown-header">Bombas</li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">Cortadoras</li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3">
+                                                    <ul>
+                                                        <li class="dropdown-header">Mucho mas</li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li class="divider"/>
+                                                        <li class="dropdown-header">Cortadoras</li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Roghur</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3">
+                                                    <ul>
+                                                        <li class="dropdown-header">Coleccion de Herramientas</li>
+                                                        <div id="womenCollection" class="carousel slide"
+                                                             data-ride="carousel">
+                                                            <div class="carousel-inner">
+                                                                <div class="item active">
+                                                                    <a href="#">
+                                                                        <img src="https://roghur.com/wadm/imagenes/producto/mediana/07_10_2016_19_52_05_2134727298.png"
+                                                                             class="img-responsive" alt="product 1"/>
+                                                                    </a>
+                                                                    <h4>
+                                                                        <small>Herramientas industriales</small>
+                                                                    </h4>
+                                                                    <button class="btn btn-primary" type="button">49,99
+                                                                        Bs
+                                                                    </button>
+                                                                    <button href="http://demo.redeskbolivia.com/shop/product/ie-6150-1-67"
+                                                                            class="btn btn-default" type="button">
+                                                                        <span class="fa fa-shopping-cart"/>Comprar Ahora
+                                                                    </button>
+                                                                </div><!-- End Item -->
+                                                                <div class="item">
+                                                                    <a href="#">
+                                                                        <img src="https://roghur.com/wadm/imagenes/producto/mediana/13_01_2017_20_08_53_1039885868.jpg"
+                                                                             class="img-responsive" alt="product 2"/>
+                                                                    </a>
+                                                                    <h4>
+                                                                        <small>Herramientas de hogar</small>
+                                                                    </h4>
+                                                                    <button class="btn btn-primary" type="button">9,99
+                                                                        Bs
+                                                                    </button>
+                                                                    <button href="http://demo.redeskbolivia.com/shop/product/ie-6200-5-68"
+                                                                            class="btn btn-default" type="button">
+                                                                        <span class="fa fa-shopping-cart"/>Comprar Ahora
+                                                                    </button>
+                                                                </div><!-- End Item -->
+                                                                <div class="item">
+                                                                    <a href="#">
+                                                                        <img src="https://roghur.com/wadm/imagenes/producto/mediana/07_10_2016_19_52_05_2134727298.png"
+                                                                             class="img-responsive" alt="product 3"/>
+                                                                    </a>
+                                                                    <h4>
+                                                                        <small>Herramientas Forestales</small>
+                                                                    </h4>
+                                                                    <button class="btn btn-primary" type="button">49,99
+                                                                        Bs
+                                                                    </button>
+                                                                    <button href="http://demo.redeskbolivia.com/shop/product/ie-8170-69"
+                                                                            class="btn btn-default" type="button">
+                                                                        <span class="fa fa-shopping-cart"/>
+                                                                        Comprar Ahora
+                                                                    </button>
+                                                                </div><!-- End Item -->
+                                                            </div><!-- End Carousel Inner -->
+                                                            <!-- Controls -->
+                                                            <a class="left carousel-control" href="#womenCollection"
+                                                               role="button" data-slide="prev">
+                                                                <span class="fa fa-chevron-left" aria-hidden="true"/>
+                                                                <span class="sr-only">Previous</span>
+                                                            </a>
+                                                            <a class="right carousel-control" href="#womenCollection"
+                                                               role="button" data-slide="next">
+                                                                <span class="fa fa-chevron-right" aria-hidden="true"/>
+                                                                <span class="sr-only">Next</span>
+                                                            </a>
+                                                        </div><!-- /.carousel -->
+                                                        <li class="divider"/>
+                                                        <li>
+                                                            <a href="#">Mirar toda la coleccion
+                                                                <span class="fa fa-chevron-right pull-right"/>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown mega-dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bombas
+                                                <span class="caret"/>
+                                            </a>
+                                            <ul class="dropdown-menu mega-dropdown-menu">
+                                                <li class="col-sm-3" style="border-right-style: ridge;">
+                                                    <ul>
+                                                        <a href="#">
+                                                            <img src="https://roghur.com/wadm/imagenes/producto/mediana/07_10_2016_19_52_05_2134727298.png"
+                                                                 class="img-responsive" alt="product 1"/>
+                                                        </a>
+                                                        <li class="dropdown-header">Bombas QR</li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <button href="#" class="btn btn-default" type="button">Ver
+                                                            todos
+                                                        </button>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3" style="border-right-style: ridge;">
+                                                    <ul>
+                                                        <a href="#">
+                                                            <img src="https://roghur.com/wadm/imagenes/producto/mediana/07_10_2016_19_52_05_2134727298.png"
+                                                                 class="img-responsive" alt="product 1"/>
+                                                        </a>
+                                                        <li class="dropdown-header">Bombas TR</li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <button href="#" class="btn btn-default" type="button">Ver
+                                                            todos
+                                                        </button>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3" style="border-right-style:ridge;">
+                                                    <ul>
+                                                        <a href="#">
+                                                            <img src="https://roghur.com/wadm/imagenes/producto/mediana/07_10_2016_19_52_05_2134727298.png"
+                                                                 class="img-responsive" alt="product 1"/>
+                                                        </a>
+                                                        <li class="dropdown-header">Bombas ER</li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <button href="#" class="btn btn-default" type="button">Ver
+                                                            todos
+                                                        </button>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3">
+                                                    <ul>
+                                                        <a href="#">
+                                                            <img src="https://roghur.com/wadm/imagenes/producto/mediana/07_10_2016_19_52_05_2134727298.png"
+                                                                 class="img-responsive" alt="product 1"/>
+                                                        </a>
+                                                        <li class="dropdown-header">Bombas VR</li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><span class="fa fa-chevron-right"
+                                                                              aria-hidden="true"/>Roghur
+                                                            </a>
+                                                        </li>
+                                                        <button href="#" class="btn btn-default" type="button">Ver
+                                                            todos
+                                                        </button>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!--<ul class="nav navbar-nav navbar-right">-->
+                                    <!--<li class="dropdown">-->
+                                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My account <span class="caret"></span></a>-->
+                                    <!--<ul class="dropdown-menu" role="menu">-->
+                                    <!--<li><a href="#">Action</a></li>-->
+                                    <!--<li><a href="#">Another action</a></li>-->
+                                    <!--<li><a href="#">Something else here</a></li>-->
+                                    <!--<li class="divider"></li>-->
+                                    <!--<li><a href="#">Separated link</a></li>-->
+                                    <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li><a href="#">My cart (0) items</a></li>-->
+                                    <!--</ul>-->
+                                </div><!-- /.nav-collapse -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $('.nav-collapse').collapse('hide');
+                </script>
+            </xpath>
+        </template>
+    </data>
+</odoo>
